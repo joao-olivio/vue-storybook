@@ -13,6 +13,7 @@ const classes = computed(() => ({
   "btn--primary": props.primary,
   "btn--secondary": !props.primary,
 }));
+console.log("Testing Automation")
 </script>
 
 <style lang="scss">
