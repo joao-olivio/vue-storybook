@@ -1,52 +1,43 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
+  <button :class="classes">{{ label }}</button>
 </template>
 
-<script>
-import './button.css';
-import { reactive, computed } from 'vue';
-
-export default {
-  name: 'my-button',
-
-  props: {
-    label: {
-      type: String,
-      required: true,
-    },
-    primary: {
-      type: Boolean,
-      default: false,
-    },
-    size: {
-      type: String,
-      validator: function (value) {
-        return ['small', 'medium', 'large'].indexOf(value) !== -1;
-      },
-    },
-    backgroundColor: {
-      type: String,
-    },
-  },
-
-  emits: ['click'],
-
-  setup(props, { emit }) {
-    props = reactive(props);
-    return {
-      classes: computed(() => ({
-        'storybook-button': true,
-        'storybook-button--primary': props.primary,
-        'storybook-button--secondary': !props.primary,
-        [`storybook-button--${props.size || 'medium'}`]: true,
-      })),
-      style: computed(() => ({
-        backgroundColor: props.backgroundColor,
-      })),
-      onClick() {
-        emit('click');
-      }
-    }
-  },
-};
+<script setup lang="ts">
+import { computed } from "vue";
+const props = defineProps({
+  primary: Boolean,
+  label: String,
+});
+const classes = computed(() => ({
+  btn: true,
+  "btn--primary": props.primary,
+  "btn--secondary": !props.primary,
+}));
 </script>
+
+<style lang="scss">
+.btn {
+  cursor: pointer;
+  height: 50px;
+  width: 328px;
+  border: 2px solid #ee685f;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 275px;
+  }
+
+  &--primary {
+    background-color: #ee685f;
+    color: white;
+  }
+
+  &--secondary {
+    background-color: white;
+    color: #ee685f;
+  }
+}
+</style>
