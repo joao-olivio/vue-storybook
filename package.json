@@ -6,12 +6,13 @@
     "build": "run-p type-check build-only",
     "preview": "vite preview --port 4173",
     "test:unit": "vitest --environment jsdom",
-    "test": "vitest --environment jsdom --outputFile .jest-test-results.json --reporter=json --run --coverage",
+    "test": "vitest --environment jsdom --outputFile .jest-test-results.json --reporter=json --run --coverage || true",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prebuild:storybook": "npm run test"
   },
   "dependencies": {
     "@etchteam/storybook-addon-status": "^4.2.1",
