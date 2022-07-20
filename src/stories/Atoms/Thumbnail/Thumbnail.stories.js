@@ -14,7 +14,7 @@ const Template = (args) => ({
 });
 
 
-export const Default = Template.bind({});
-Default.args = {
+export const Post = Template.bind({});
+Post.args = {
     image: 'https://res.cloudinary.com/weigelcinthya/image/upload/v1658183370/ross-parmly-rf6ywHVkrlY-unsplash_jfoneh.jpg'
 }
