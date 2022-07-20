@@ -49,15 +49,15 @@ workflows:
     jobs:
       - test
       - build:
-        requires:
-          - test
+          requires:
+            - test
           filters:
             branches:
               only:
                 - main
       - deploy:
-        requires:
-          - build
+          requires:
+            - build
           filters:
             branches:
               only:
