@@ -1,4 +1,5 @@
 import { statuses as statusPluginParameters } from "./statusPlugin.config";
+import "../src/assets/entry.scss"
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
