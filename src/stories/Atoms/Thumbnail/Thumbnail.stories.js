@@ -10,9 +10,8 @@ const Template = (args) => ({
     setup() {
       return { args };
     },
-    template: '<thumbnail v-bind="args"/>',
+    template: '<Thumbnail v-bind="args"/>',
 });
-
 
 export const Post = Template.bind({});
 Post.args = {

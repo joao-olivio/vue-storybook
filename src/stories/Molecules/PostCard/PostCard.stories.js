@@ -10,7 +10,7 @@ const Template = (args) => ({
   setup() {
     return { args };
   },
-  template: '<post-card v-bind="args"/>',
+  template: '<PostCard v-bind="args"/>',
 });
 
 export const Default = Template.bind({});

@@ -1,6 +1,6 @@
 <template>
   <div class="post-card">
-    <thumbnail class="post-card__thumbnail" :image="image" />
+    <Thumbnail class="post-card__thumbnail" :image="image" />
     <div class="post-card-header">
       <small class="post-card-header__date"> {{ props.date }} </small>
       <small class="post-card-header__estimated-reading-time">
