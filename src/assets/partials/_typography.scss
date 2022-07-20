@@ -1,0 +1,44 @@
+h1 {
+  color: var(--default-black);
+  font-size: 24px;
+  line-height: 29.26px;
+  font-weight: 700;
+
+  @media (min-width: 768px) {
+    font-size: 40px;
+    line-height: 48.76px;
+  }
+}
+
+h2 {
+  color: var(--default-black);
+  font-size: 24px;
+  line-height: 29.26px;
+  font-weight: 600;
+
+  @media (min-width: 768px) {
+    font-size: 40px;
+    line-height: 48.76px;
+  }
+}
+
+h3 {
+  color: var(--default-black);
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+p {
+  color: var(--default-black);
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+small {
+  color: var(--default-black);
+  font-size: 20px;
+  line-height: 17.07px;
+  font-weight: 400;
+}

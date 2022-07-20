@@ -20,7 +20,7 @@ const classes = computed(() => ({
   cursor: pointer;
   height: 50px;
   width: 328px;
-  border: 2px solid #ee685f;
+  border: 2px solid var(--default-red);
   border-radius: 10px;
   font-weight: 600;
   font-size: 16px;
@@ -31,13 +31,13 @@ const classes = computed(() => ({
   }
 
   &--primary {
-    background-color: #ee685f;
+    background-color: var(--default-red);
     color: white;
   }
 
   &--secondary {
     background-color: white;
-    color: #ee685f;
+    color: var(--default-red);
   }
 }
 </style>
