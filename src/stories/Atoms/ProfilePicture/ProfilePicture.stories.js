@@ -10,7 +10,7 @@ const Template = (args) => ({
     setup() {
       return { args };
     },
-    template: '<profile-picture v-bind="args"/>',
+    template: '<ProfilePicture v-bind="args"/>',
 });
 
 

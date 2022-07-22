@@ -1,7 +1,7 @@
 <template>
   <div class="review-card">
     <div class="review-card__profile-picture">
-      <profile-picture :image="props.image"></profile-picture>
+      <ProfilePicture :image="props.image"></ProfilePicture>
     </div>
     <p class="review-card__testimonial">{{ props.testimonial }}</p>
     <p class="review-card-author">

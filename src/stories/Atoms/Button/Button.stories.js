@@ -1,19 +1,19 @@
-import MyButton from "./Button.vue";
+import Button from "./Button.vue";
 
 export default {
   title: "Atoms/Button",
-  component: MyButton,
+  component: Button,
   argTypes: {
     onClick: { action: "clicked" },
   },
 };
 
 const Template = (args) => ({
-  components: { MyButton },
+  components: { Button },
   setup() {
     return { args };
   },
-  template: '<my-button v-bind="args" />',
+  template: '<Button v-bind="args" />',
 });
 
 export const Primary = Template.bind({});
