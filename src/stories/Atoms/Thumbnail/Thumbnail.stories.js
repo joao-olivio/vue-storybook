@@ -6,11 +6,11 @@ export default {
 };
 
 const Template = (args) => ({
-  components: { Thumbnail },
-  setup() {
-    return { args };
-  },
-  template: '<thumbnail v-bind="args"/>',
+    components: { Thumbnail },
+    setup() {
+      return { args };
+    },
+    template: '<Thumbnail v-bind="args"/>',
 });
 
 export const Post = Template.bind({});
@@ -30,3 +30,4 @@ Offer.args = {
     price: 50000,
   },
 };
+

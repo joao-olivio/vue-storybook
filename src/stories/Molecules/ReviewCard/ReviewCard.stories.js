@@ -10,7 +10,7 @@ const Template = (args) => ({
     setup() {
       return { args };
     },
-    template: '<review-card v-bind="args"/>',
+    template: '<ReviewCard v-bind="args"/>',
 });
 
 
