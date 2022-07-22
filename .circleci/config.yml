@@ -50,7 +50,7 @@ jobs:
     steps:
       - run:
           name: Deploy to Netlify
-          command: https://api.netlify.com/build_hooks/62da092c7ae490278b9e769d
+          command: curl -X POST -d {} https://api.netlify.com/build_hooks/62da092c7ae490278b9e769d
 workflows:
   version: 2
   build-deploy:
