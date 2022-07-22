@@ -42,7 +42,7 @@ jobs:
       - save_cache:
           key: app-build-cache-{{ .Branch }}
           paths:
-            - ./build
+            - ./storybook-static
   deploy:
     working_directory: ~/repo
     docker:
@@ -64,7 +64,7 @@ jobs:
       - save_cache:
           key: app-build-cache-{{ .Branch }}
           paths:
-            - ./build
+            - ./storybook-static
       - run:
           name: Deploy to Netlify
           command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=storybook-static
