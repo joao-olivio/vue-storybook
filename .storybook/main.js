@@ -18,6 +18,7 @@ module.exports = {
   features: {
     storyStoreV7: true,
   },
+  staticDirs: ["../public"],
   async viteFinal(config) {
     return mergeConfig(config, {
       css: {
@@ -27,7 +28,7 @@ module.exports = {
             additionalData: `
                         @import "${path.resolve(
                           __dirname,
-                          "../src/assets/entry"
+                          "../src/assets/style/entry.scss"
                         )}";
                     `,
           },

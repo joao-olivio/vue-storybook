@@ -24,8 +24,6 @@ const props = defineProps({
 
 <style lang="scss">
 .review-card {
-  width: 317px;
-  height: 301px;
 
   &__profile-picture{
     text-align: center;
