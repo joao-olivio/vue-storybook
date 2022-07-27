@@ -4,7 +4,9 @@
     <p v-if="props.subTitle" class="custom-section__subtitle">
       {{ props.subTitle }}
     </p>
-    <slot class="custom-section__content"></slot>
+    <div class="custom-section__content">
+      <slot></slot>
+    </div>
   </section>
 </template>
 
@@ -23,9 +25,13 @@ const props = defineProps({
 
 .custom-section {
   width: 100%;
+  max-width: none;
   text-align: center;
   padding: 70px 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &__title {
     margin: 0;
